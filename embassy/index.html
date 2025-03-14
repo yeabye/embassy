@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card and Digital Currency Display</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    
+    <h1>US Embassy Payment Methiods</h1>
+    <h1><i>Choose Your payment Methiod Please</i></h1>
+  </header>
+
+  <main>
+  
+
+    <section class="categories">
+      <h2>Cards</h2>
+      <div class="card-styles">
+        <div class="card mastercard" onclick="showCardDetails('Mastercard', '3294 4168 7964 8391', '12/28', '783', 'John Alex')">
+          <div class="card-logo"></div>
+          <div class="card-number">3294 4168 7964 8391</div>
+          <div class="card-details">
+            <div class="card-name">John Alex</div>
+            <div class="card-expiry">12/28</div>
+            <div class="card-cvv">CVV: 783</div>
+          </div>
+        </div>
+        <div class="card visa" onclick="showCardDetails('Visa', '9366 1437 1098 2684', '12/28', '477', 'Marc Kenedi')">
+          <div class="card-logo"></div>
+          <div class="card-number">9366 1437 1098 2684</div>
+          <div class="card-details">
+            <div class="card-name">Marc Kenedi</div>
+            <div class="card-expiry">12/28</div>
+            <div class="card-cvv">CVV: 477</div>
+          </div>
+        </div>
+        <div class="card amex" onclick="showCardDetails('Amex', '4927 9356 1952 6743', '12/28', '739', 'Alice Smith')">
+          <div class="card-logo"></div>
+          <div class="card-number">4927 9356 1952 6743</div>
+          <div class="card-details">
+            <div class="card-name">Alice Smith</div>
+            <div class="card-expiry">12/28</div>
+            <div class="card-cvv">CVV: 739</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Digital Currencies</h2>
+      <div class="digital-currencies">
+        <div class="currency btc" onclick="showCurrencyDetails('Bitcoin', '1Nr5oLHYcB8rVXBiLLd2ARh5AJnp85ocfo')">
+          <div class="currency-logo"></div>
+          <div class="currency-name">Bitcoin</div>
+          <div class="currency-address">
+            <span>1Nr5oLHYcB8rVXBiLLd......</span>
+            <button class="copy-button" onclick="copyToClipboard('1Nr5oLHYcB8rVXBiLLd2ARh5AJnp85ocfo')">Copy</button>
+          </div>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=1Nr5oLHYcB8rVXBiLLd2ARh5AJnp85ocfo" alt="BTC QR Code" class="qr-code">
+        </div>
+        <div class="currency eth" onclick="showCurrencyDetails('Ethereum', '0x0469247ed01405c71e47ad864a604b73a63a2f4c')">
+          <div class="currency-logo"></div>
+          <div class="currency-name">Ethereum</div>
+          <div class="currency-address">
+            <span>0x0469247ed01405c71e47a......</span>
+            <button class="copy-button" onclick="copyToClipboard('0x0469247ed01405c71e47ad864a604b73a63a2f4c')">Copy</button>
+          </div>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x0469247ed01405c71e47ad864a604b73a63a2f4c" alt="ETH QR Code" class="qr-code">
+        </div>
+        <div class="currency usdt" onclick="showCurrencyDetails('Tether', 'TW81QoQNZrvQ8qbSy96d74DZ7vUjNbLESG')">
+          <div class="currency-logo"></div>
+          <div class="currency-name">Tether</div>
+          <div class="currency-address">
+            <span>TW81QoQNZrvQ8qbSy96d7......</span>
+            <button class="copy-button" onclick="copyToClipboard('TW81QoQNZrvQ8qbSy96d74DZ7vUjNbLESG')">Copy</button>
+          </div>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TW81QoQNZrvQ8qbSy96d74DZ7vUjNbLESG" alt="USDT QR Code" class="qr-code">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-info">
+      <h2>Contact Information</h2>
+      <div class="contact-details">
+        <p><strong>Email:</strong> usaembassygovet@gmail.com</p>
+        <p><strong>Location:</strong> 1350 Pennsylvania Avenue NW, Suite 419, Washington, DC 20004</p>
+        <p><strong>Phone:</strong> +1 (407) 468 0343</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      
+      <p>All rights reserved © US Embassy 2025</p>
+    </div>
+  </footer>
+
+  <!-- Modal for Details -->
+  <div id="details-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="details-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
